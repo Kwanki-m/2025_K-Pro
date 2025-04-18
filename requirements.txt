@@ -5,3 +5,5 @@ scikit-learn
 Plotly
 streamlit
 xgboost
+openpyxl
+matplolib
