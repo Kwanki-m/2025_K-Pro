@@ -8,20 +8,7 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import platform
 
-if platform.system() == "Darwin":  #
-    plt.rc("font", family="AppleGothic")
-else:
-    plt.rc("font", family="NanumGothic")
 
-fe = fm.FontEntry(
-    fname=r"/usr/share/fonts/truetype/nanum/NanumGothic.ttf",  # ttf 파일이 저장되어 있는 경로
-    name="NanumGothic",
-)  # 원하는 폰트 설정
-fm.fontManager.ttflist.insert(0, fe)  # Matplotlib에 폰트 추가
-
-plt.rcParams.update({"font.size": 18, "font.family": "NanumGothic"})  # 폰트 설정
-
-plt.rcParams["axes.unicode_minus"] = False
 
 # Streamlit sidebar for user inputs
 st.sidebar.title("모델 하이퍼파라미터 설정")
