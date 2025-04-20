@@ -4,11 +4,21 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 from xgboost import XGBRegressor
+
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import platform
 
+# 한글 폰트 설정
+if platform.system() == 'Windows':
+    plt.rcParams['font.family'] = 'Malgun Gothic'  # Windows
+elif platform.system() == 'Darwin':
+    plt.rcParams['font.family'] = 'AppleGothic'  # macOS
+else:
+    # 리눅스 (예: Streamlit Cloud)
+    plt.rcParams['font.family'] = 'NanumGothic'
 
+plt.rcParams['axes.unicode_minus'] = False  # 마이너스 깨짐 방지
 
 # Streamlit sidebar for user inputs
 st.sidebar.title("모델 하이퍼파라미터 설정")
