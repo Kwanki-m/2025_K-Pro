@@ -2,8 +2,8 @@ numpy
 pandas
 scipy
 scikit-learn
-Plotly
+plotly
 streamlit
 xgboost
 openpyxl
-matplolib
+matplotlib
